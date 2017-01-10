@@ -1,0 +1,6 @@
+https://github.com/biedro94/PubApp
+https://scotch.io/tutorials/build-a-mobile-app-with-angular-2-and-ionic-2
+https://scotch.io/tutorials/create-your-first-mobile-app-with-angularjs-and-ionic
+http://blog.ionic.io/ionic-2-and-auth0/
+https://www.youtube.com/watch?v=GNAPJ3uL9UE
+http://kamilmysliwiec.com/kurs-angular-2-komponenty/
