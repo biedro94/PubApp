@@ -14,7 +14,7 @@ namespace BaseRepository
 {
     public class BaseRepository
     {
-        private static readonly string _sConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + bingPathToAppDir("DataBase\\Pub.mdf") + ";Integrated Security=True;Connect Timeout=30";
+        private static readonly string _sConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + bingPathToAppDir("Repository\\DataBase\\Pub.mdf") + ";Integrated Security=True;Connect Timeout=30";
 
         public static string bingPathToAppDir(string localPath)
         {

@@ -9,7 +9,7 @@ using Data.Model;
 
 namespace WebService.Controllers
 {
-    [Authorize]
+
     public class ValuesController : ApiController
     {
         [HttpPost]
@@ -25,6 +25,22 @@ namespace WebService.Controllers
             else
                 return null;
             
+        }
+
+        [HttpPost]
+        [Route("User/Registration/{Client_Email}/{Client_Password}")]
+        public DMLResult RegisterUser(string Client_Email, string Client_Password)
+        {
+            DMLResult res = new DMLResult();
+            Result<DMLResult> cres = DependencyResolver.DependencyResolver.Get().RegisterUserService(Client_Email, Client_Password);
+            if (cres.Success)
+            {
+                res = cres.Data;
+                return res;
+            }
+            else
+                return null;
+
         }
         //// GET api/values
         //public IEnumerable<string> Get()

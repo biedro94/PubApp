@@ -26,5 +26,15 @@ namespace Application.Service
             return result;            
         }
 
+        public Result<DMLResult> RegisterUserService(string Client_Email, string Client_Password)
+        {
+            DMLResult insert = new DMLResult();
+            insert = repo.RegisterUser(Client_Email,Client_Password);
+            Result<DMLResult> result = new Result<DMLResult>(insert);
+            result.InsertCheck();
+            return result;
+        }
+
+
     }
 }
