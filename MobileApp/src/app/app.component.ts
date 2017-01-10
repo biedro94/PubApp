@@ -7,7 +7,7 @@ import { StatusBar } from 'ionic-native';
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ListPage } from '../pages/list/list';
 import { RegistrationPage } from '../pages/registration/registration';
-
+import { LoginPage } from '../pages/login/login';
 @Component({
   templateUrl: 'app.html'
 })
@@ -15,7 +15,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage: any = RegistrationPage;
+  rootPage: any = LoginPage;
   pages: Array<{title: string, component: any}>;
 
   constructor(

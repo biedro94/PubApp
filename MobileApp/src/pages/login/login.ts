@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-//import {FormBuilder, Validators, Control, ControlGroup, FORM_DIRECTIVES} from "@angular/common";
 import { NavController } from 'ionic-angular';
-//import  {FormBuilder} from '@angular/common';
 import {FormBuilder, Validators} from "@angular/forms";
 import { LoadingController } from 'ionic-angular';
-
+import {RegistrationPage} from '../registration/registration';
+//import {ValidationService} from '../../Validation/Validation';
 /*
   Generated class for the Registration page.
 
@@ -12,23 +11,23 @@ import { LoadingController } from 'ionic-angular';
   Ionic pages and navigation.
 */
 @Component({
-  selector:'page-registration',
-  templateUrl: 'registration.html'
+  selector:'page-login',
+  templateUrl: 'login.html'
 })
-export class RegistrationPage {
+export class LoginPage {
 
   public registrationForm:any;
 
   constructor(public navCtrl: NavController, public _form:FormBuilder, public loadingCtrl: LoadingController) {
   this.registrationForm = this._form.group({
-    "email":["",Validators.required],
-    "password":["",Validators.required]//, GlobalValidator.mailFormat]
+    "email":["",Validators.compose([Validators.required, Validators.minLength(3)])],
+    "password":["",Validators.compose([Validators.required, Validators.minLength(3)])]//, ValidationService.emailValidator()] //todo valid email
   })
 
   }
 
     ionViewDidLoad() {
-      console.log('Hello RegistrationPage Page');
+      console.log('Hello Login Page');
     }
 
   submit(){
@@ -37,9 +36,12 @@ export class RegistrationPage {
   presentLoading() {
     let loader = this.loadingCtrl.create({
       content: "Please wait...",
-      duration: 2000
+      duration: 1000
     });
     loader.present();
+  }
+  goToRegister(){
+    this.navCtrl.push(RegistrationPage);
   }
 }
 

@@ -8,7 +8,7 @@
       <ion-label class="mainLabel">PubApp</ion-label>
 
   </ion-item>
-<form [formGroup]="registrationForm" (submit)="presentLoading();submit();">
+<form [formGroup]="registrationForm" (submit)="submit();presentLoading()">
   <ion-list>
 
     <ion-item>
@@ -18,11 +18,12 @@
 
     <ion-item>
       <ion-label fixed>Password</ion-label>
-      <ion-input formControlName="password" type="password"></ion-input>
+      <ion-input formControlName="password"  type="password"></ion-input>
     </ion-item>
 
   </ion-list>
-  <button class="but" style="align-items: center" ion-button color="secondary">Register</button>
+  <button class="but"  ion-button color="secondary">Sign In</button>
 </form>
 
+  <button class="but" (click)="goToRegister();"  ion-button color="primary">Register</button>
 </ion-content>
