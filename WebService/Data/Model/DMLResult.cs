@@ -12,6 +12,7 @@ namespace Data.Model
         public int Ilosc_update { get; set; }
         public int Ilosc_delete { get; set; }
         public bool Success { get { return Ilosc_insert > 0; } }
+        public bool UserExist { get { return Ilosc_insert == 0; } }
 
         public DMLResult()
         {

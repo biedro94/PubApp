@@ -9,6 +9,9 @@ namespace Data.Model
     public class Client
     {
         int Client_Id { get; set; }
-        string Client_Name { get; set; }
+        string Client_Password { get; set; }
+        string Client_Email { get; set; }
+        string Token { get; set; } 
+
     }
 }

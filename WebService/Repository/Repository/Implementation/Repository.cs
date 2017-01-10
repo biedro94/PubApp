@@ -20,5 +20,15 @@ namespace BaseRepository.Repository.Implementation
                     productsListId = ProductsList_Id
                 });
         }
+
+        public DMLResult RegisterUser(string Client_Email, string Client_Password)
+        {
+            return SimpleDML("User_Register",
+                new
+                {
+                    client_email = Client_Email,
+                    client_password = Client_Password
+                });
+        }
     }
 }
