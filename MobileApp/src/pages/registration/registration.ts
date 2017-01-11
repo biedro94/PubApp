@@ -16,7 +16,7 @@ export class RegistrationPage {
   constructor(public navCtrl: NavController) {}
 
     ionViewDidLoad() {
-      console.log('Hello RegistrationPage Page');
+
     }
 
 

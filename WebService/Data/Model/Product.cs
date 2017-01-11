@@ -8,12 +8,12 @@ namespace Data.Model
 {
     public class Product
     {
-        int Product_Id { get; set; }
-        string Product_Name { get; set; }
-        int Quantity { get; set; }
-        float Price { get; set; }
-        string Description { get; set; }
-        string Weight { get; set; }
-
+        public int Product_Id { get; set; }
+        public string Product_Name { get; set; }
+        public int Quantity { get; set; }
+        public float Price { get; set; }
+        public string Description { get; set; }
+        public string Weight { get; set; }
+        public int Category_Id { get; set; }
     }
 }

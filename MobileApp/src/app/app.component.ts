@@ -1,10 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-
 import { Platform, MenuController, Nav } from 'ionic-angular';
-
 import { StatusBar } from 'ionic-native';
-
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
+import { Menu } from '../pages/menu/menu';
 import { ListPage } from '../pages/list/list';
 import { RegistrationPage } from '../pages/registration/registration';
 
@@ -26,9 +23,8 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Menu', component: HelloIonicPage },
-      { title: 'Zamówienia', component: ListPage },
-      { title: 'Rejestracja', component: RegistrationPage}
+      { title: 'Menu', component: Menu },
+      { title: 'Zamówienia', component: ListPage }
     ];
   }
 
@@ -47,4 +43,3 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
 }
-1111111111111111

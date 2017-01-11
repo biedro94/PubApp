@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
+import { Menu } from '../pages/menu/menu';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
 import {RegistrationPage} from '../pages/registration/registration'
@@ -9,7 +9,7 @@ import {RegistrationPage} from '../pages/registration/registration'
 @NgModule({
   declarations: [
     MyApp,
-    HelloIonicPage,
+    Menu,
     ItemDetailsPage,
     ListPage,
     RegistrationPage
@@ -20,7 +20,7 @@ import {RegistrationPage} from '../pages/registration/registration'
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HelloIonicPage,
+    Menu,
     ItemDetailsPage,
     ListPage,
     RegistrationPage

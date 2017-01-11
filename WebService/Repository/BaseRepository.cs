@@ -61,6 +61,24 @@ namespace BaseRepository
             return result;
         }
 
+        public static List<T> GetCollection<T>(string storedProcedure)
+        where T : class, new()
+        {
+            List<T> result = new List<T>();
+
+            using (SqlConnection connection = new SqlConnection(BaseRepository._sConnectionString))
+            {
+
+                var queryResult = connection.Query<T>(storedProcedure, commandType: CommandType.StoredProcedure);
+
+                if (queryResult.HasValue())
+                {
+                    result = queryResult.AsEnumerable().ToList<T>();
+                }
+            }
+            return result;
+        }
+
         public static T GetScalar<T>(string storedProcedure, object args)
         where T : struct
         {

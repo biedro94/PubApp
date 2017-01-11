@@ -11,5 +11,6 @@ namespace BaseRepository.Repository.Interface
     {
         DMLResult CreateOrder(int Client_Id, int Table_Number, int ProductsList_Id);
         DMLResult RegisterUser(string Client_Email, string Client_Password);
+        List<Product> GetListOfProducts();
     }
 }

@@ -35,6 +35,14 @@ namespace Application.Service
             return result;
         }
 
+        public Result<List<Product>> GetListOfProductsService()
+        {
+            List<Product> productList = repo.GetListOfProducts();
+            Result<List<Product>> result = new Result<List<Product>>(productList);
+            result.ErrorIfDataNull();
+            return result;
+        }
+
 
     }
 }

@@ -30,5 +30,10 @@ namespace BaseRepository.Repository.Implementation
                     client_password = Client_Password
                 });
         }
+
+        public List<Product> GetListOfProducts()
+        {
+            return GetCollection<Product>("Product_GetList");
+        }
     }
 }
