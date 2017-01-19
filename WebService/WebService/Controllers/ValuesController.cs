@@ -6,10 +6,11 @@ using System.Net.Http;
 using System.Web.Http;
 using DependencyResolver;
 using Data.Model;
+using Newtonsoft.Json;
 
 namespace WebService.Controllers
 {
-    [Authorize]
+
     public class ValuesController : ApiController
     {
         [HttpPost]
@@ -24,33 +25,62 @@ namespace WebService.Controllers
             }
             else
                 return null;
-            
+
         }
+
+        [HttpPost]
+        [Route("User/Registration")]       
+        public DMLResult RegisterUser(string Client_Email, string Client_Password, string Client_Username)
+        {
+            DMLResult res = new DMLResult();
+            Result<DMLResult> cres = DependencyResolver.DependencyResolver.Get().RegisterUserService(Client_Email,Client_Password,Client_Username);
+            if (cres.Success)
+            {
+                res = cres.Data;
+                return res;
+            }
+            else
+                return res;
+
+        }
+
         //// GET api/values
         //public IEnumerable<string> Get()
         //{
         //    return new string[] { "value1", "value2" };
         //}
 
-        //// GET api/values/5
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
+        [HttpPost]
+        [Route("User/Login")]
+        public Client LoginUser(string Client_Email, string Client_Password)
+        {
+            Client result = new Client();
+            Result<Client> res = DependencyResolver.DependencyResolver.Get().LoginUserService(Client_Email,Client_Password);
+            if (res.Success)
+            {
+                result = res.Data;
+                return result;
+            }else
+            {
+                return result;
+            }
+        }
 
-        //// POST api/values
-        //public void Post([FromBody]string value)
-        //{
-        //}
-
-        //// PUT api/values/5
-        //public void Put(int id, [FromBody]string value)
-        //{
-        //}
-
-        //// DELETE api/values/5
-        //public void Delete(int id)
-        //{
-        //}
+        [HttpGet]
+        [Route("Product/List")]
+        public List<Product> GetListOfProducts()
+        {
+            List<Product> result = new List<Product>();
+            Result<List<Product>> res = DependencyResolver.DependencyResolver.Get().GetListOfProductsService();
+            if (res.Success)
+            {
+                foreach(Product pr in res.Data)                
+                    result.Add(pr);
+                
+                return result;
+            }
+            else
+                return null;
+        }    
     }
 }

@@ -1,0 +1,15 @@
+C:\Users\Damian\Documents\Projects\WebService\DependencyResolver\bin\Debug\DependencyResolver.dll
+C:\Users\Damian\Documents\Projects\WebService\DependencyResolver\bin\Debug\DependencyResolver.pdb
+C:\Users\Damian\Documents\Projects\WebService\DependencyResolver\bin\Debug\Application.Service.dll
+C:\Users\Damian\Documents\Projects\WebService\DependencyResolver\bin\Debug\Data.dll
+C:\Users\Damian\Documents\Projects\WebService\DependencyResolver\bin\Debug\Repository.dll
+C:\Users\Damian\Documents\Projects\WebService\DependencyResolver\bin\Debug\NLog.dll
+C:\Users\Damian\Documents\Projects\WebService\DependencyResolver\bin\Debug\Application.Service.pdb
+C:\Users\Damian\Documents\Projects\WebService\DependencyResolver\bin\Debug\Data.pdb
+C:\Users\Damian\Documents\Projects\WebService\DependencyResolver\bin\Debug\Repository.pdb
+C:\Users\Damian\Documents\Projects\WebService\DependencyResolver\bin\Debug\NLog.xml
+C:\Users\Damian\Documents\Projects\WebService\DependencyResolver\obj\Debug\DependencyResolver.csprojResolveAssemblyReference.cache
+C:\Users\Damian\Documents\Projects\WebService\DependencyResolver\obj\Debug\DependencyResolver.dll
+C:\Users\Damian\Documents\Projects\WebService\DependencyResolver\obj\Debug\DependencyResolver.pdb
+C:\Users\Damian\Documents\Projects\WebService\DependencyResolver\bin\Debug\Dapper.dll
+C:\Users\Damian\Documents\Projects\WebService\DependencyResolver\bin\Debug\Dapper.xml

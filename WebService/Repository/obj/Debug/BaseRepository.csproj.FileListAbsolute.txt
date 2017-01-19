@@ -1,0 +1,11 @@
+C:\Users\Damian\Documents\Projects\WebService\Repository\obj\Debug\BaseRepository.csprojResolveAssemblyReference.cache
+C:\Users\Damian\Documents\Projects\WebService\Repository\obj\Debug\Repository.dll
+C:\Users\Damian\Documents\Projects\WebService\Repository\obj\Debug\Repository.pdb
+C:\Users\Damian\Documents\Projects\WebService\Repository\bin\Debug\Repository.dll
+C:\Users\Damian\Documents\Projects\WebService\Repository\bin\Debug\Repository.pdb
+C:\Users\Damian\Documents\Projects\WebService\Repository\bin\Debug\Dapper.dll
+C:\Users\Damian\Documents\Projects\WebService\Repository\bin\Debug\Data.dll
+C:\Users\Damian\Documents\Projects\WebService\Repository\bin\Debug\NLog.dll
+C:\Users\Damian\Documents\Projects\WebService\Repository\bin\Debug\Data.pdb
+C:\Users\Damian\Documents\Projects\WebService\Repository\bin\Debug\Dapper.xml
+C:\Users\Damian\Documents\Projects\WebService\Repository\bin\Debug\NLog.xml

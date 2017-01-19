@@ -14,7 +14,7 @@ namespace BaseRepository
 {
     public class BaseRepository
     {
-        private static readonly string _sConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + bingPathToAppDir("DataBase\\Pub.mdf") + ";Integrated Security=True;Connect Timeout=30";
+        private static readonly string _sConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + bingPathToAppDir("Repository\\DataBase\\Pub.mdf") + ";Integrated Security=True;Connect Timeout=30";
 
         public static string bingPathToAppDir(string localPath)
         {
@@ -52,6 +52,24 @@ namespace BaseRepository
             {
 
                 var queryResult = connection.Query<T>(storedProcedure, args, commandType: CommandType.StoredProcedure);
+
+                if (queryResult.HasValue())
+                {
+                    result = queryResult.AsEnumerable().ToList<T>();
+                }
+            }
+            return result;
+        }
+
+        public static List<T> GetCollection<T>(string storedProcedure)
+        where T : class, new()
+        {
+            List<T> result = new List<T>();
+
+            using (SqlConnection connection = new SqlConnection(BaseRepository._sConnectionString))
+            {
+
+                var queryResult = connection.Query<T>(storedProcedure, commandType: CommandType.StoredProcedure);
 
                 if (queryResult.HasValue())
                 {

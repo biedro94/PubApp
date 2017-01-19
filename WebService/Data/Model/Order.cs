@@ -16,5 +16,6 @@ namespace Data.Model
         DateTime Order_Date { get; set; }
         DateTime Order_AcceptDate { get; set; }
         DateTime Order_EndDate { get; set; }
+        int ProductList_Id {get;set;}
     }
 }

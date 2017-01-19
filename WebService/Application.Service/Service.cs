@@ -25,6 +25,30 @@ namespace Application.Service
             result.InsertCheck();
             return result;            
         }
+        public Result<DMLResult> RegisterUserService(string Client_Email, string Client_Password, string Client_Username)
+        {
+            DMLResult insert = new DMLResult();
+            insert = repo.RegisterUser(Client_Email,Client_Password, Client_Username);
+            Result<DMLResult> result = new Result<DMLResult>(insert);
+            result.InsertCheck();
+            return result;
+        }
+
+        public Result<List<Product>> GetListOfProductsService()
+        {
+            List<Product> productList = repo.GetListOfProducts();
+            Result<List<Product>> result = new Result<List<Product>>(productList);
+            result.ErrorIfDataNull();
+            return result;
+        }
+
+        public Result<Client> LoginUserService(string Client_Email, string Client_Password)
+        {
+            Client cl = repo.LoginUser(Client_Email, Client_Password);
+            Result<Client> result = new Result<Client>(cl);
+            result.ErrorIfDataNull();
+            return result;
+        }
 
     }
 }

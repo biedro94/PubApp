@@ -8,7 +8,10 @@ namespace Data.Model
 {
     public class Client
     {
-        int Client_Id { get; set; }
-        string Client_Name { get; set; }
+        public int Client_Id { get; set; }
+        public string Client_Name { get; set; }
+        public string Client_Email { get; set; }
+        public string Token { get; set; }
+        public string Client_Username { get; set; }
     }
 }
